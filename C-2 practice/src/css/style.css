@@ -1,0 +1,218 @@
+@charset "utf-8";
+/* entire document */
+
+* {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  font-family: "맑은 고딕";
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+#wrap {
+  margin: 0 auto;
+  padding: 0;
+  display: block;
+  width: 1000px;
+  height: 650px;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: none;
+}
+
+div {
+  display: block;
+}
+
+/*----------------------- aside -----------------------*/
+
+aside {
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+
+aside #hdlogo {
+  float: left;
+  width: 100%;
+  height: 40px;
+  background-color: #aa7777;
+}
+
+aside #hdnav {
+  float: left;
+  width: 160px;
+  height: 570px;
+  padding: 20px;
+  background-color: #bb8877;
+}
+
+/* head menu */
+
+#hdnav .mainMenu {
+  float: left;
+  width: 100%;
+  height: auto;
+  background-color: #bb8877;
+}
+
+.mainMenu a {
+  float: left;
+  width: 100%;
+  height: 40px;
+  background-color: #333333;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainMenu .subMenu {
+  display: none;
+  float: left;
+  width: 100%;
+  height: 160px;
+}
+
+.subMenu li {
+  float: left;
+  width: 100%;
+  height: 25%;
+}
+
+.subMenu li a {
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-color: #ccaa77;
+}
+
+/*----------------------- main -----------------------*/
+
+main {
+  float: left;
+  width: 80%;
+  height: 350px;
+}
+
+main #imgSlide {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+  background-color: #cc9977;
+}
+
+/* img silde */
+
+#imgSlide .imgitem {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.imgitem a {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.imgitem a img {
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.imgitem a h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+/*----------------------- section -----------------------*/
+
+section {
+  float: left;
+  width: 80%;
+  height: 200px;
+}
+
+section #notice {
+  float: left;
+  width: 40%;
+  height: 100%;
+  background-color: #ddaa77;
+}
+
+section #gallery {
+  float: left;
+  width: 30%;
+  height: 100%;
+  background-color: #eebb77;
+}
+
+section #shortcut {
+  float: left;
+  width: 30%;
+  height: 100%;
+  background-color: #ffcc77;
+}
+
+/*----------------------- footer -----------------------*/
+
+footer {
+  float: left;
+  width: 80%;
+  height: 100px;
+}
+
+footer #copy {
+  float: left;
+  width: 80%;
+  height: 100%;
+  background-color: #dd9988;
+}
+
+footer #link {
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+
+#link .SNS {
+  float: left;
+  width: 100%;
+  height: 50%;
+  background-color: #ee9999;
+}
+
+#link .site {
+  float: left;
+  width: 100%;
+  height: 50%;
+  background-color: #ff99aa;
+}

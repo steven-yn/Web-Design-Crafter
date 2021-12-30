@@ -1,0 +1,166 @@
+@charset "utf-8";
+/* css document */
+
+/* 문서 전체 서식 (기본값)*/
+*{
+    margin: 0 auto; /* 좌우 바깥 여백을 자동할당, 중앙정렬로 만듬. */
+    padding: 0;
+    list-style: none; /* 목록태그 (ul, ol, li) 사용부분에 목록 스타일이 나타나지 않게. */
+    font-family: "맑은 고딕"; /* 수험자 임의 */
+    color: #222328;
+}
+
+/* body 기본 서식 */
+body{
+    width: 1000px;
+    background-color: #ffffff;
+    font-size: 20px; /* 수험자 임의 */
+}
+
+/* a 요소 기본 서식 */
+a{
+    text-decoration: none;  /* 링크가 걸린 텍스트에 자동으로 나타나는 밑줄 나타나지 않게. */
+    display: block; /* a요소는 inline 이므로 block 처럼 사용하도록 */
+}
+
+/* header (menu와 logo를 담은) 서식 */
+header{
+    float: left;
+}
+
+/* menu logo 묶음 박스 */
+.top{
+    float: left;
+    height: 650px; /* B, C, D height 합친크기 */
+    width: 200px; /* 수험자 임의 */
+}
+
+.logo{
+    float: left;
+    height: 40px;   /* 세부 지시사항에 명시 */
+    width: 200px;
+    margin-top: 30px;
+    margin-bottom: 30px;    /* logo의 총 height는 100px */
+}
+
+/* menu 묶음 컨테이너 */
+.menu{
+    width: 180px;   /* margin없이 메뉴 컨테이너를 180으로 지정 */
+    top: 100px; /* top쪽에 100px 여백 */
+    text-align: center;
+}
+
+/* main menu 서식 */
+
+.navi>li{
+    float: left;
+    width: 180px;
+}
+
+.navi>li>a{
+    height: 40px;   /* 메인메뉴 한칸당 height */
+    width: 180px;
+    line-height: 40px;  /* 같게 해줌으로써 수직정렬 */
+    font-size: 16px;    /* 수험자 임의 */
+    font-weight: bold;  /* 수험자 임의 */
+    background-color: #222328;  /* 수험자 임의 */
+    color: #ffffff; /* 수험자 임의 */
+}
+
+.navi>li>a:hover{
+    background-color: #930930;  /* 수험자 임의 */
+    color: #ffff00; /* 수험자 임의 */
+}
+
+.imgslide{
+    float: right;
+    height: 350px;  /* 세부 지시사항에 명시 */
+    width: 800px;   /* 1000 - top(200) */
+}
+
+
+.submenu{
+    float: left;
+    width: 100%;    /* 180px */
+    display: none;  /* 기본적으론 보이지않게 */
+}
+
+.submenu>li>a{
+    height: 40px;   /* 수험자 임의 */
+    width: 180px;
+    line-height: 40px;  /* 수직정렬 */
+    font-size: 14px;    /* 수험자 임의 */
+    font-weight: bold;  /* 수험자 임의 */
+    background-color: #cccccc;  /* 메인 페이지 색상을 고려하여 지정 */
+    color: #ffffff; /* 수험자 임의 */
+}
+
+.submenu>li>a:hover{
+    background-color: #999999;  /* 수험자 임의 */
+    color: #ffff00; /* 수험자 임의 */
+}
+
+/* 중앙 컨텐츠 묶음 박스 */
+.contents{
+    float: right;
+    height: 200px;  /* 세부 지시사항에 명시. 총길이는 200px */
+    width: 800px;
+}
+
+.notice{
+    float: left;
+    height: 190px;  /* 세부 지시사항에 명시. 총길이는 200px */
+    width: 280px;   /* 수험자 임의. 이 과제에서는 갤러리나 바로가기 이미지크기에 맞춰서
+                        하는것이 좋은듯 하다. */
+    margin-top: 10px;   /* 위쪽 여백 살짝 */
+}
+
+.gallery{
+    float: left;
+    height: 190px;  /* 세부 지시사항에 명시. 총길이는 200px */
+    width: 300px;   /* 수험자 임의. 갤러리안에 들어가는 이미지와 합리적으로 배치 */
+    margin-top: 10px;   /* notice와 마찬가지로 위쪽 여백 살짝 */
+    margin-left: 20px;  /* 왼쪽 여백 살짝. 갤러리 박스의 총길이는 320px */
+}
+
+.shortcut{
+    float: left;
+    height: 200px;  /* 세부 지시사항에 명시 */
+    width: 200px;   /* 800 - notice 280 - gallery 320 */
+}
+
+footer{
+    float: right;
+}
+
+/* 하단 배너 박스 */
+.bottom{
+    float: left;
+    height: 100px;  /* 세부 지시사항에 명시 */
+    width: 800px;
+    background-color: #ababab;  /* 수험자 임의 */
+}
+
+.copy{
+    float: left;
+    height: 100px;  /* 세부 지시사항에 명시 */
+    width: 600px;   /* 수험자 임의 */
+}
+
+.site{
+    float: right;
+    height: 100px;  /* 세부 지시사항에 명시 */
+    width: 200px;   /* 800 - copy 600 */
+}
+
+.sns{
+    float: right;
+    height: 50px;   /* 반으로나눠씀 */
+    width: 200px;
+}
+
+.familysite{
+    float: right;
+    height: 50px;   /* 반으로나눠씀 */
+    width: 200px;
+}

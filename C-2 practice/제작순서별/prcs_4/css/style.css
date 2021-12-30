@@ -1,0 +1,342 @@
+@charset "utf-8";
+/* css document */
+
+/* 문서 전체 서식 (기본값)*/
+*{
+    margin: 0 auto; /* 좌우 바깥 여백을 자동할당, 중앙정렬로 만듬. */
+    padding: 0;
+    list-style: none; /* 목록태그 (ul, ol, li) 사용부분에 목록 스타일이 나타나지 않게. */
+    font-family: "맑은 고딕"; /* 수험자 임의 */
+    color: #222328;
+}
+
+/* body 기본 서식 */
+body{
+    width: 1000px;
+    background-color: #ffffff;
+    font-size: 20px; /* 수험자 임의 */
+}
+
+/* a 요소 기본 서식 */
+a{
+    text-decoration: none;  /* 링크가 걸린 텍스트에 자동으로 나타나는 밑줄 나타나지 않게. */
+    display: block; /* a요소는 inline 이므로 block 처럼 사용하도록 */
+}
+
+/* header (menu와 logo를 담은) 서식 */
+header{
+    float: left;
+}
+
+/* menu logo 묶음 박스 */
+.top{
+    float: left;
+    height: 650px; /* B, C, D height 합친크기 */
+    width: 200px; /* 수험자 임의 */
+}
+
+.logo{
+    float: left;
+    height: 40px;   /* 세부 지시사항에 명시 */
+    width: 200px;
+    margin-top: 30px;
+    margin-bottom: 30px;    /* logo의 총 height는 100px */
+}
+
+/* menu 묶음 컨테이너 */
+.menu{
+    width: 180px;   /* margin없이 메뉴 컨테이너를 180으로 지정 */
+    top: 100px; /* top쪽에 100px 여백 */
+    text-align: center;
+}
+
+/* main menu 서식 */
+
+.navi>li{
+    float: left;
+    width: 180px;
+}
+
+.navi>li>a{
+    height: 40px;   /* 메인메뉴 한칸당 height */
+    width: 180px;
+    line-height: 40px;  /* 같게 해줌으로써 수직정렬 */
+    font-size: 16px;    /* 수험자 임의 */
+    font-weight: bold;  /* 수험자 임의 */
+    background-color: #222328;  /* 수험자 임의 */
+    color: #ffffff; /* 수험자 임의 */
+}
+
+.navi>li>a:hover{
+    background-color: #930930;  /* 수험자 임의 */
+    color: #ffff00; /* 수험자 임의 */
+}
+
+.imgslide{
+    float: right;
+    height: 350px;  /* 세부 지시사항에 명시 */
+    width: 800px;   /* 1000 - logo, menu 200  */
+    position: relative; /* body 컨테이너 상 relative */
+}
+
+.imgslide>a{
+    display: block; /* 각각 a요소 block 처리 */
+    position: absolute; /* 이미지, 텍스트 float 처리없이 absolute */
+    left: 0;    /* 여백없음 */
+    top: 0;
+}
+
+.imgtext{
+    height: 50px;   /* 수험자 임의 */
+    width: 300px;   /* 수험자 임의 */
+    position: absolute;
+    margin: -25px 0 0 -150px;   /* height 50/2 width 300/2 만큼 
+                                     컨테이너 박스가 반대쪽으로 shift */
+    text-align: center;
+    color: #ffffff; /* 수험자 임의 */
+    font-weight: bold; 
+    line-height: 50px;  /* height과 같게하여 수직정렬 */
+    background-color: rgba(40, 40, 40, 0.3);    /* 어두운 배경색, 불투명도 0.3 */
+    left: 50%;  /* 컨테이너 시작점 기준으로 50%의 여백 */
+    top: 50%;   /* 컨테이너 박스가 반대쪽으로 shift 된다 */
+}
+
+.submenu{
+    float: left;
+    width: 100%;    /* 180px */
+    display: none;  /* 기본적으론 보이지않게 */
+}
+
+.submenu>li>a{
+    height: 40px;   /* 수험자 임의 */
+    width: 180px;
+    line-height: 40px;  /* 수직정렬 */
+    font-size: 14px;    /* 수험자 임의 */
+    font-weight: bold;  /* 수험자 임의 */
+    background-color: #cccccc;  /* 메인 페이지 색상을 고려하여 지정 */
+    color: #ffffff; /* 수험자 임의 */
+}
+
+.submenu>li>a:hover{
+    background-color: #999999;  /* 수험자 임의 */
+    color: #ffff00; /* 수험자 임의 */
+}
+
+/* 중앙 컨텐츠 묶음 컨테이너 */
+.contents{
+    float: right;
+    height: 200px;  /* 세부 지시사항에 명시. 총길이는 200px */
+    width: 800px;
+}
+
+/* 컨텐츠 세부영역 명시 컨테이너 */
+.tab{
+    float: left;
+    width: 300px;   /* notice와 동일
+     */
+}
+
+/* '공지사항' 탭 서식 */
+.tab h4{    /* 수험자 임의 */
+    float: left;
+    height: 30px;   
+    width: 80px;    
+    line-height: 30px;  /* 수직정렬 */
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.notice{    /* contents width 280 320 200 */
+    float: left;
+    height: 190px;  /* 세부 지시사항에 명시. 총길이는 200px */
+    width: 280px;   /* 수험자 임의. 이 과제에서는 갤러리나 바로가기 이미지크기에 맞춰서
+                        하는것이 좋은듯 하다. */
+    margin-top: 10px;   /* 위쪽 여백 10 */
+}
+
+.notice>div{    /* '공지사항' 탭 밑줄을 주기위한 div */
+    width: 280px;   /* notice 컨테이너와 일치하게 */
+    border-bottom-color: #cccccc;
+    border-bottom-width: 1px;   
+    border-bottom-style: solid;
+}
+
+.notice ul{    /* 내용은 4줄이므로 190 - 30 안에서 4개 항목 나와야함. */
+    float: left;
+    height: 30px;   /* 각 내용 height 수험자임의 */
+    width: 280px;   /* 컨테이너와 일치 */
+    line-height: 30px;  /* 수직정렬 */
+    font-size: 14px;
+}
+
+.notice li span {   /* 한줄안에 표시하기위해 span 사용. */
+    float: right;   /* 날짜를 오른쪽으로 */
+}
+
+.notice li:nth-child(2n){
+    background-color: #cccccc;  /* 짝수번째 내용마다 배경색 지정. */
+}
+
+.notice li:hover{
+    font-weight: bold;
+}
+
+.gallery{
+    float: left;
+    height: 190px;  /* 세부 지시사항에 명시. 총길이는 200px */
+    width: 300px;   /* 수험자 임의. 갤러리안에 들어가는 이미지와 합리적으로 배치 */
+    margin-top: 10px;   /* notice와 마찬가지로 위쪽 여백 살짝 */
+    margin-left: 20px;  /* 왼쪽 여백 살짝. 갤러리 박스의 총길이는 320px */
+}
+
+.gallery>div{   /* '갤러리' 탭 밑줄을 주기위한 div */
+    width: 280px;   /* 수험자 임의 */
+    border-bottom-color: #CCCCCC;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+.gallery ul li{
+    float: left;
+    padding: 10px;  /* 이미지당 패딩 10 */
+    margin-top: 10px;   /* 이미지당 마진탑 10 */
+}
+
+.gallery img{
+    height: 90px;   /* 총길이 100 */
+    width: 75px;    /* 총길이 95 * 3 = 285 */
+}
+
+.gallery li:hover{
+    opacity: 0.5;
+}
+
+.shortcut{  /* 바로가기 컨테이너 */
+    float: left;
+    height: 200px;  /* 세부 지시사항에 명시 */
+    width: 200px;   /* 800 - notice 280 - gallery 320 */
+}
+
+.shortcut img{
+    float: right;
+    margin-top: 10px;
+    height: 180px;  /* 총길이 190 */
+    width: 180px;   /* 왼쪽이 20만큼 띄워져 있음. 수험자 임의 */
+}
+
+.sctext{
+    float: right;
+    height: 30px;   /* 수험자 임의 */
+    width: 100px;   /* 수험자 임의 */
+    position: absolute;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 30px;  /* 수직정렬 */
+    background-color: rgba(40, 40, 40, 0.3);    /* 404040 검정 불투명도 0.3 */
+    margin-top: 80px;   /* 중앙에 올정도. 수험자 임의 */
+    margin-left: 60px;  /* 중앙에 올정도. 수험자 임의 */
+}
+
+.sctext:hover{
+    opacity: 0.5; 
+}
+
+/* 모달 레이어 컨테이너 */
+#modal{
+    width: 100%;    /* 화면 꽉채움 */
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0, 0.6);   /* 배경이 어두워지게 */
+    z-index: 1; /* 요소의 쌓이는 순서를 결정. 큰값을 설정한 요소가
+                화면에서 더 앞쪽. position을 함께 사용해야함. */
+    display: none;  /* 처음엔 보이지 않게 */
+}
+
+#modal.active{
+    display: block; /* 블록 단위로 보이게 */
+}
+
+/* 모달 창 컨테이너 */
+.modal_up{
+    width: 400px;   /* 수험자 임의 */
+    height: 300px;  /* 수험자 임의 */
+    position: fixed;    /*  */
+    left: 40%;  /* 여백 40% 수험자 임의*/
+    top: 40%;   /* 수험자 임의 */
+    background-color: #ffffff;  /* 수험자 임의 */
+}
+
+/* 모달창 타이틀 */
+.uptitle{
+    margin-top: 20px;   /* 수험자 임의 */
+    text-align: center; /* 수험자 임의 */
+    line-height: 30px;  /* 수험자 임의 */
+    font-size: 20px;    /* 수험자 임의 */
+    font-weight: bold;  /* 수험자 임의 */
+}
+
+/* 모달창 내용 */
+.upbody{
+    padding: 30px;  /* 수험자 임의 */
+    text-align: center; /* 수험자 임의 */
+    font-size: 15px;    /* 수험자 임의 */
+    line-height: 40px;  /* 수험자 임의 */
+}
+
+/* 모달창 닫기버튼 */
+.btn{
+    height: 20px;   /* 수험자 임의 */
+    width: 80px;    /* 수험자 임의 */
+    cursor: pointer;    
+    display: block;
+    text-align: center; 
+    font-size: 15px;    
+    font-weight: bold;
+    border-radius: 3px; /* 수험자 임의 */
+    background: #cccccc; /* 수험자 임의 */
+    position: absolute;
+    right: 10px;    /* 오른쪽 10 여백 수험자 임의 */
+    bottom: 10px;   /* 아래 10 여백 수험자 임의 */
+}
+
+footer{
+    float: right;
+}
+
+/* 하단 배너 박스 */
+.bottom{
+    float: left;
+    height: 100px;  /* 세부 지시사항에 명시 */
+    width: 800px;
+    background-color: #ababab;  /* 수험자 임의 */
+}
+
+.copy{
+    float: left;
+    height: 100px;  /* 세부 지시사항에 명시 */
+    width: 600px;   /* 수험자 임의 */
+}
+
+.site{
+    float: right;
+    height: 100px;  /* 세부 지시사항에 명시 */
+    width: 200px;   /* 800 - copy 600 */
+}
+
+.sns{
+    float: right;
+    height: 50px;   /* 반으로나눠씀 */
+    width: 200px;
+}
+
+.familysite{
+    float: right;
+    height: 50px;   /* 반으로나눠씀 */
+    width: 200px;
+}

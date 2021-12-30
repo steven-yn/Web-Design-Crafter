@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+/* entire document */
+
+* {
+  color: #333333;
+  background-color: #ffffff;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#wrap {
+  width: 1200px;
+  height: 700px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*--------------------- header ---------------------*/
+
+header {
+  float: left;
+  width: 100%;
+  height: 100px;
+}
+
+/* logo */
+
+#hdlogo {
+  display: block;
+  float: left;
+  width: 200px;
+  height: 100%;
+}
+
+#hdlogo a {
+  width: 100%;
+  height: 100%;
+}
+
+#hdlogo a img {
+  display: block;
+  float: left;
+  width: 90%;
+  height: 80%;
+  padding: 5%;
+}
+
+/* nav mainMenu */
+
+#hdnav {
+  display: block;
+  float: left;
+  position: relative;
+  width: 980px;
+  height: 100%;
+  padding-right: 20px;
+  background-color: #bbbb44;
+}
+
+#hdnav .mainMenu {
+  display: block;
+  float: right;
+  position: relative;
+  z-index: 5;
+  width: 70%;
+  height: 50%;
+  background-color: #cccc55;
+  transform: translate(0, 50%);
+}
+
+.mainMenu li {
+  display: block;
+  float: left;
+  position: relative;
+  width: 25%;
+  height: 100%;
+  background-color: #333333;
+}
+
+.mainMenu li a:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.mainMenu li a {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #333333;
+}
+
+/* nav subMenu */
+
+.subMenu {
+  display: none;
+  float: left;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 400%;
+}
+
+.subMenu li {
+  float: left;
+  width: 100%;
+  height: 25%;
+}
+
+/*--------------------- main ---------------------*/
+
+main {
+  float: left;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+#imgSlide {
+  position: relative;
+  display: block;
+  float: left;
+  width: 1200px;
+  height: 300%;
+  background-color: #bbcc66;
+}
+
+.imgitem {
+  position: relative;
+  display: block;
+  float: left;
+  width: 100%;
+  height: 300px;
+}
+
+.imgitem a {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.imgitem a img {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.imgitem a h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+/*--------------------- section ---------------------*/
+
+section {
+  float: left;
+  width: 100%;
+  height: 200px;
+}
+
+#content {
+  display: block;
+  float: left;
+  width: 40%;
+  height: 100%;
+}
+
+/* tab btn */
+
+#content .tab-btn {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 20%;
+}
+
+.tab-btn div {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.tab-btn div a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aacc77;
+  color: #333333;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.tab-btn .active a {
+  background-color: rgba(170, 204, 119, 0.7);
+}
+
+/* tab cont */
+
+#content .tab-cont {
+  display: block;
+  float: left;
+  width: 100%;
+  height: 80%;
+}
+
+.tab-cont div {
+  display: none;
+}
+
+.tab-cont .active {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* cont notice */
+
+.tab-cont .notice {
+  float: left;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.notice li {
+  float: left;
+  width: 100%;
+  height: 25%;
+  background-color: rgba(170, 204, 119, 0.7);
+}
+
+.notice li a {
+  position: relative;
+  float: left;
+  width: 95%;
+  transform: translate(0, 50%);
+  padding-left: 5%;
+  background-color: rgba(170, 204, 119, 0);
+}
+
+.notice li a span {
+  display: block;
+  float: right;
+  padding-right: 15px;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(170, 204, 119, 0);
+}
+
+/* cont gallery */
+
+.tab-cont .gallery {
+  float: left;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(170, 204, 119, 0.7);
+}
+
+.gallery li {
+  float: left;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(170, 204, 119, 0);
+}
+
+.gallery li a {
+  float: left;
+  width: 90%;
+  height: 80%;
+}
+
+.gallery li a img {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+#banner {
+  display: block;
+  float: left;
+  width: 30%;
+  height: 100%;
+  background-color: #ccdd55;
+}
+
+#shortcut {
+  display: block;
+  float: left;
+  width: 30%;
+  height: 100%;
+  background-color: #bbdd99;
+}
+
+/*--------------------- footer ---------------------*/
+
+footer {
+  float: left;
+  width: 100%;
+  height: 100px;
+}
+
+#btmlogo {
+  display: block;
+  float: left;
+  width: 200px;
+  height: 100%;
+  background-color: #bbcc88;
+}
+
+#btmnav {
+  display: block;
+  float: left;
+  width: 1000px;
+  height: 100%;
+  background-color: #aabb99;
+}

@@ -1,0 +1,373 @@
+/* css document */
+@charset "utf-8";
+
+/* default */
+
+#wrap {
+  width: 1000px;
+  height: 650px;
+  margin: 0 auto;
+  background: #cccccc;
+}
+
+* {
+  /**/
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: #222328;
+  background: #ffffff;
+  list-style: none;
+  text-decoration: none;
+}
+
+.clearfix::after,
+.clearfix::before {
+  /**/
+  display: block;
+  content: "";
+  clear: both;
+}
+
+/* aside */
+
+#aside {
+  float: left;
+  width: 200px;
+}
+
+#aside .logo {
+  height: 80px;
+}
+
+#aside .logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#aside .logo a img {
+  width: 90%;
+  height: 80%;
+  padding: 5%;
+}
+
+/* nav */
+
+.nav {
+  height: 570px;
+  background: #7e7e7e;
+}
+
+.nav ul.menu {
+  float: left;
+  width: 160px;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.nav ul.menu li {
+  position: relative;
+}
+
+.nav ul.menu li a {
+  text-align: center;
+  display: block;
+
+  left: 5px;
+  top: 5px;
+  padding: 5px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  color: #ffffff;
+  background: #222328;
+}
+
+.nav ul.menu li a:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.nav ul.menu li ul.submenu {
+  display: none;
+  position: absolute;
+  z-index: 5;
+
+  left: 160px;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background: #ffffff;
+}
+
+/* banner */
+
+#banner {
+  /**/
+  float: left;
+  width: 800px;
+  height: 350px;
+  overflow: hidden;
+}
+
+/* slide */
+.slideList {
+  position: relative;
+  width: 2400px;
+  height: 350px;
+}
+
+.slideList .slideImg {
+  position: relative;
+  float: left;
+  width: 800px;
+  height: 350px;
+}
+
+.slideList .slideImg a h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /**/
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 10px;
+  border-radius: 25px;
+  text-align: center;
+}
+
+.slideList .slideImg a img {
+  display: block;
+}
+
+/* content */
+
+#content {
+  float: left;
+}
+
+/* 탭 메뉴 */
+#content .tab {
+  float: left;
+  width: 280px;
+  height: 200px;
+  background: #ffffff;
+  margin: 0 auto;
+}
+
+/* 탭 버튼 */
+.tab-btn {
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn ul li {
+  float: left;
+  width: 140px;
+}
+
+.tab-btn ul li.active a {
+  text-decoration: underline solid #222328;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn ul li a {
+  padding: 10px;
+  display: block;
+  height: 30px;
+  text-align: center;
+}
+
+/* 탭 공지사항 */
+
+.tab-cont ul {
+  width: 280px;
+  height: 150px;
+  position: relative;
+  list-style: none;
+}
+
+.tab-cont ul li {
+  width: 100%;
+  height: 25%;
+  position: relative;
+  float: left;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tab-cont ul li a {
+  position: absolute;
+  width: 100%;
+  top: 25%;
+  display: block;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.tab-cont ul li a span {
+  float: right;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* 탭 갤러리 */
+.tab-gall div {
+  display: none;
+}
+
+.tab-gall ul {
+  display: flex;
+  width: 280px;
+  height: 150px;
+  list-style: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tab-gall ul li {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.tab-gall ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.tab-gall ul li a img {
+  width: 85%;
+  height: 85%;
+}
+
+/* 배너 */
+#content .banner {
+  float: left;
+  position: relative;
+  width: 260px;
+  height: 200px;
+}
+
+.banner a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.banner h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 5px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* 바로가기 */
+#content .shortcut {
+  float: left;
+  position: relative;
+  width: 260px;
+  height: 200px;
+}
+
+.shortcut a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.shortcut img {
+  width: 100%;
+  height: 100%;
+}
+
+.shortcut h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 5px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* footer */
+
+#footer {
+  float: left;
+  width: 800px;
+  height: 100px;
+}
+
+/* 바텀로고 */
+#footer .btm_logo {
+  float: left;
+  width: 200px;
+  height: 100px;
+}
+
+#footer .btm_logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#footer .btm_logo a img {
+  width: 90%;
+  height: 80%;
+  padding: 5%;
+}
+
+/* 하단메뉴 */
+#footer .btm_menu {
+  float: left;
+  width: 600px;
+  height: 50px;
+  background: #7e7e7e;
+}
+
+.btm_menu ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #7e7e7e;
+}
+
+.btm_menu ul a {
+  background: #7e7e7e;
+}
+
+/* 카피라이트 */
+#footer .copy {
+  position: relative;
+  float: left;
+  width: 600px;
+  height: 50px;
+  background: #7e7e7e;
+}
+
+.copy h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #7e7e7e;
+}
